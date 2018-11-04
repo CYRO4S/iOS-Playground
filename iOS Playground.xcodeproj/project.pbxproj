@@ -15,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		415D9643218EDD5D00E8436E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		41F6F07D218EC0530000E825 /* iOS Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F6F080218EC0530000E825 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41F6F082218EC0530000E825 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		41F6F074218EC0520000E825 = {
 			isa = PBXGroup;
 			children = (
+				415D9643218EDD5D00E8436E /* README.md */,
 				41F6F07F218EC0530000E825 /* iOS Playground */,
 				41F6F07E218EC0530000E825 /* Products */,
 			);
