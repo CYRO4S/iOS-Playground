@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				41F6F080218EC0530000E825 /* AppDelegate.swift */,
-				41F6F082218EC0530000E825 /* ViewController.swift */,
-				41F6F084218EC0530000E825 /* Main.storyboard */,
 				41F6F087218EC0540000E825 /* Assets.xcassets */,
 				41F6F089218EC0540000E825 /* LaunchScreen.storyboard */,
 				41F6F08C218EC0540000E825 /* Info.plist */,
+				41F6F082218EC0530000E825 /* ViewController.swift */,
+				41F6F084218EC0530000E825 /* Main.storyboard */,
 			);
 			path = "iOS Playground";
 			sourceTree = "<group>";
@@ -283,6 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S3AV2FF3X6;
 				INFOPLIST_FILE = "iOS Playground/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S3AV2FF3X6;
 				INFOPLIST_FILE = "iOS Playground/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
