@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410E35FE218FD1C200C147DB /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E35FD218FD1C200C147DB /* Concentration.swift */; };
+		410E3600218FD28E00C147DB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410E35FF218FD28E00C147DB /* Card.swift */; };
 		41F6F081218EC0530000E825 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F6F080218EC0530000E825 /* AppDelegate.swift */; };
 		41F6F083218EC0530000E825 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F6F082218EC0530000E825 /* ViewController.swift */; };
 		41F6F086218EC0530000E825 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41F6F084218EC0530000E825 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410E35FD218FD1C200C147DB /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		410E35FF218FD28E00C147DB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		415D9643218EDD5D00E8436E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		41F6F07D218EC0530000E825 /* iOS Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F6F080218EC0530000E825 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,12 +60,14 @@
 		41F6F07F218EC0530000E825 /* iOS Playground */ = {
 			isa = PBXGroup;
 			children = (
-				41F6F080218EC0530000E825 /* AppDelegate.swift */,
 				41F6F087218EC0540000E825 /* Assets.xcassets */,
-				41F6F089218EC0540000E825 /* LaunchScreen.storyboard */,
 				41F6F08C218EC0540000E825 /* Info.plist */,
-				41F6F082218EC0530000E825 /* ViewController.swift */,
+				41F6F089218EC0540000E825 /* LaunchScreen.storyboard */,
 				41F6F084218EC0530000E825 /* Main.storyboard */,
+				41F6F080218EC0530000E825 /* AppDelegate.swift */,
+				41F6F082218EC0530000E825 /* ViewController.swift */,
+				410E35FD218FD1C200C147DB /* Concentration.swift */,
+				410E35FF218FD28E00C147DB /* Card.swift */,
 			);
 			path = "iOS Playground";
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			files = (
 				41F6F083218EC0530000E825 /* ViewController.swift in Sources */,
 				41F6F081218EC0530000E825 /* AppDelegate.swift in Sources */,
+				410E35FE218FD1C200C147DB /* Concentration.swift in Sources */,
+				410E3600218FD28E00C147DB /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S3AV2FF3X6;
 				INFOPLIST_FILE = "iOS Playground/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S3AV2FF3X6;
 				INFOPLIST_FILE = "iOS Playground/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

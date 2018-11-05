@@ -10,20 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var btnCards: [UIButton]!
-    @IBOutlet weak var lblFlipsCount: UILabel!
+    lazy var game = Concentration(numberOfPairs: (btnCards.count + 1) / 2)
     
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        flip_count += 1
-        if let card_number = btnCards.index(of: sender) {
-            print("Card #: \(card_number)")
-            flipCard(with: emojiChoices[card_number], on: sender)
-        } else {
-            print("Card was not in btnCards")
-        }
-    }
-    
-    var emojiChoices: [String] = ["🐱", "🦎", "🦉", "🐱", "🦎", "🦉"]
+    var emojiChoices: [String] = ["🐱", "🦎", "🦉", "🐺", "🌛", "🔬", "🌃"]
     
     var flip_count = 0 {
         didSet {
@@ -31,14 +20,42 @@ class ViewController: UIViewController {
         }
     }
     
-    func flipCard(with str: String, on button: UIButton) {
-        if button.currentTitle == str {
-            button.setTitle("", for: UIControl.State.normal)
-            button.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+    var emoji = [Int:String]()
+    
+    func emoji(for card: Card) -> String {
+        // if identifier exists and still have choices, go on.
+        if emoji[card.identifier] == nil, emojiChoices.count > 0 {
+            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
+            emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
+        }
+        
+        return emoji[card.identifier] ?? "?"
+    }
+    
+    func updateViewFromModel() {
+        for index in btnCards.indices {
+            let button = btnCards[index]
+            let card = game.cards[index]
+            if card.isFaceUp {
+                button.setTitle(emoji(for: card), for: UIControl.State.normal)
+                button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            } else {
+                button.setTitle("", for: UIControl.State.normal)
+                button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0) : #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+            }
+        }
+    }
+    
+    @IBOutlet var btnCards: [UIButton]!
+    @IBOutlet weak var lblFlipsCount: UILabel!
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        flip_count += 1
+        if let card_number = btnCards.index(of: sender) {
+            game.chooseCard(at: card_number)
+            updateViewFromModel()
         } else {
-            button.setTitle(str, for: UIControl.State.normal)
-            button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            print("Card was not in btnCards")
         }
     }
 }
-
